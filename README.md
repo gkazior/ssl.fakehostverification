@@ -8,6 +8,7 @@
    Never use it in production!
 
    May be usefull when you have:
+   
         javax.net.ssl.SSLHandshakeException: java.security.cert.CertificateException: No subject alternative names present
                 at sun.security.ssl.Alerts.getSSLException(Alerts.java:192) ~[na:1.7.0_71]
                 at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1884) ~[na:1.7.0_71]
