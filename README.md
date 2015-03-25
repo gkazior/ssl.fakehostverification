@@ -7,9 +7,33 @@
    The java agent will disable hostname verification for test purposes.
    Never use it in production!
 
-   The nasty hack is based on Vadim Kopichenko comments on disabling hostname verification here:
+   May be usefull when you have:
+        javax.net.ssl.SSLHandshakeException: java.security.cert.CertificateException: No subject alternative names present
+                at sun.security.ssl.Alerts.getSSLException(Alerts.java:192) ~[na:1.7.0_71]
+                at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1884) ~[na:1.7.0_71]
+                at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:276) ~[na:1.7.0_71]
+                at sun.security.ssl.Handshaker.fatalSE(Handshaker.java:270) ~[na:1.7.0_71]
+                at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1439) ~[na:1.7.0_71]
+                at sun.security.ssl.ClientHandshaker.processMessage(ClientHandshaker.java:209) ~[na:1.7.0_71]
+                at sun.security.ssl.Handshaker.processLoop(Handshaker.java:878) ~[na:1.7.0_71]
+                at sun.security.ssl.Handshaker.process_record(Handshaker.java:814) ~[na:1.7.0_71]
+                at sun.security.ssl.SSLSocketImpl.readRecord(SSLSocketImpl.java:1016) ~[na:1.7.0_71]
+                at sun.security.ssl.SSLSocketImpl.performInitialHandshake(SSLSocketImpl.java:1312) ~[na:1.7.0_71]
+                at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1339) ~[na:1.7.0_71]
+                at sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:1323) ~[na:1.7.0_71]
+        Caused by: java.security.cert.CertificateException: No subject alternative names present
+                at sun.security.util.HostnameChecker.matchIP(HostnameChecker.java:142) ~[na:1.7.0_71]
+                at sun.security.util.HostnameChecker.match(HostnameChecker.java:91) ~[na:1.7.0_71]
+                at sun.security.ssl.X509TrustManagerImpl.checkIdentity(X509TrustManagerImpl.java:347) ~[na:1.7.0_71]
+                at sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:203) ~[na:1.7.0_71]
+                at sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:126) ~[na:1.7.0_71]
+                at sun.security.ssl.ClientHandshaker.serverCertificate(ClientHandshaker.java:1421) ~[na:1.7.0_71]
+                ... 62 common frames omitted
+
+   The hack is based on Vadim Kopichenko comments on disabling hostname verification here:
 
    http://stackoverflow.com/questions/6031258/java-ssl-how-to-disable-hostname-verification
+
 
 ## Caution
 
