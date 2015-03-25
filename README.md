@@ -74,29 +74,29 @@
 
 ## Compilation
 
-   javac FakeHostnameVerifierAgent.java
-   jar cmf manifest.txt fakehostverification.jar *.class
+        javac FakeHostnameVerifierAgent.java
+        jar cmf manifest.txt fakehostverification.jar *.class
 
 ## Some reading
 
-   http://www.crsr.net/Notes/SSL.html
-   http://apetec.com/support/GenerateSAN-CSR.htm
+   * http://www.crsr.net/Notes/SSL.html
+   * http://apetec.com/support/GenerateSAN-CSR.htm
 
-   http://bugs.java.com/view_bug.do?bug_id=6766775
-   http://stackoverflow.com/questions/6031258/java-ssl-how-to-disable-hostname-verification
-   http://stackoverflow.com/questions/11898566/tutorials-about-javaagents
-   https://stackoverflow.com/questions/10423319/how-do-you-analyze-fatal-javaagent-errors
+   * http://bugs.java.com/view_bug.do?bug_id=6766775
+   * http://stackoverflow.com/questions/6031258/java-ssl-how-to-disable-hostname-verification
+   * http://stackoverflow.com/questions/11898566/tutorials-about-javaagents
+   * https://stackoverflow.com/questions/10423319/how-do-you-analyze-fatal-javaagent-errors
 
-   http://www.nakov.com/blog/2009/07/16/disable-certificate-validation-in-java-ssl-connections/
-   https://tersesystems.com/2014/03/23/fixing-hostname-verification/
-   http://serverfault.com/questions/109800/multiple-ssl-domains-on-the-same-ip-address-and-same-port
-   http://stackoverflow.com/questions/19540289/how-to-fix-the-java-security-cert-certificateexception-no-subject-alternative
-   http://stackoverflow.com/questions/10258101/sslhandshakeexception-no-subject-alternative-names-present
-   http://www.mkyong.com/webservices/jax-ws/how-to-bypass-certificate-checking-in-a-java-web-service-client/
-   http://stackoverflow.com/questions/8443081/how-are-ssl-certificate-server-names-resolved-can-i-add-alternative-names-using/8444863#8444863
+   * http://www.nakov.com/blog/2009/07/16/disable-certificate-validation-in-java-ssl-connections/
+   * https://tersesystems.com/2014/03/23/fixing-hostname-verification/
+   * http://serverfault.com/questions/109800/multiple-ssl-domains-on-the-same-ip-address-and-same-port
+   * http://stackoverflow.com/questions/19540289/how-to-fix-the-java-security-cert-certificateexception-no-subject-alternative
+   * http://stackoverflow.com/questions/10258101/sslhandshakeexception-no-subject-alternative-names-present
+   * http://www.mkyong.com/webservices/jax-ws/how-to-bypass-certificate-checking-in-a-java-web-service-client/
+   * http://stackoverflow.com/questions/8443081/how-are-ssl-certificate-server-names-resolved-can-i-add-alternative-names-using/8444863#8444863
 
-   https://wiki.jasig.org/display/CASUM/SSL+Troubleshooting+and+Reference+Guide#SSLTroubleshootingandReferenceGuide-ImportTrustedCertificate
-   https://holisticsecurity.wordpress.com/2011/02/19/web-sso-between-liferay-and-alfresco-with-cas-and-penrose-part-22/
+   * https://wiki.jasig.org/display/CASUM/SSL+Troubleshooting+and+Reference+Guide#SSLTroubleshootingandReferenceGuide-ImportTrustedCertificate
+   * https://holisticsecurity.wordpress.com/2011/02/19/web-sso-between-liferay-and-alfresco-with-cas-and-penrose-part-22/
 
 ##  Usefull options
 
