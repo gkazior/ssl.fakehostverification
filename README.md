@@ -1,7 +1,14 @@
 # ssl fakehostverification
 
    Fake host verification for ssl
-
+   
+   When Java establishes the ssl connection to host X it has to verify if 
+   the host in the certificate presented by host X matches the host X.
+   If the host information does not match then this is a security breach or at least the certificate is not valid.
+   
+   In some situations (see the background) you may want to disable the verification.
+   Remember about the risks. Never use it in production.
+   
 ## Documentation
 
    The java agent will disable hostname verification for test purposes.
