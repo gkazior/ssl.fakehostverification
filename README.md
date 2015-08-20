@@ -1,21 +1,21 @@
 # ssl fakehostverification
 
    Fake host verification for ssl
-   
-   When Java establishes the ssl connection to host X it has to verify if 
+
+   When Java establishes the ssl connection to host X it has to verify if
    the host in the certificate presented by host X matches the host X.
    If the host information does not match then this is a security breach or at least the certificate is not valid.
-   
+
    In some situations (see the background) you may want to disable the verification.
    Remember about the risks. Never use it in production.
-   
+
 ## Documentation
 
    The java agent will disable hostname verification for test purposes.
    Never use it in production!
 
    May be usefull when you have:
-   
+
         javax.net.ssl.SSLHandshakeException: java.security.cert.CertificateException: No subject alternative names present
                 at sun.security.ssl.Alerts.getSSLException(Alerts.java:192) ~[na:1.7.0_71]
                 at sun.security.ssl.SSLSocketImpl.fatal(SSLSocketImpl.java:1884) ~[na:1.7.0_71]
@@ -59,7 +59,7 @@
 
    Usually it is enough to set JAVA_OPTS before running the java application, since many tools picks up the JAVA_OPTS variable:
 
-        export JAVA_OPTS="-Djavax.net.ssl.trustStore=/tmp/app.truststore -Djavax.net.ssl.trustStorePassword=changeit -javaagent:/home/crm/temp/gkazior/fakehostverification.jar"
+        export JAVA_OPTS="-Djavax.net.ssl.trustStore=/tmp/app.truststore -Djavax.net.ssl.trustStorePassword=changeit -javaagent:/tmp/fakehostverification.jar"
         java $JAVA_OPTS -jar yourApp.jar
 
 
